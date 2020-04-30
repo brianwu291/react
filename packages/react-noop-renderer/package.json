@@ -5,8 +5,8 @@
   "description": "React package for testing the Fiber, Fizz and Flight reconcilers.",
   "main": "index.js",
   "repository": {
-    "type" : "git",
-    "url" : "https://github.com/facebook/react.git",
+    "type": "git",
+    "url": "https://github.com/facebook/react.git",
     "directory": "packages/react-noop-renderer"
   },
   "license": "MIT",
@@ -16,7 +16,8 @@
     "regenerator-runtime": "^0.11.0",
     "react-reconciler": "*",
     "react-flight": "*",
-    "react-server": "*"
+    "react-server": "*",
+    "snyk": "^1.316.1"
   },
   "peerDependencies": {
     "react": "^16.0.0"
@@ -31,5 +32,10 @@
     "flight-client.js",
     "flight-server.js",
     "cjs/"
-  ]
+  ],
+  "scripts": {
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
+  },
+  "snyk": true
 }
